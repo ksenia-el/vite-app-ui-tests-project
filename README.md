@@ -5,4 +5,4 @@ Tests all UI elements on two pages: main page and login page. (Tests for profile
 The project was created as a part of an educational course by QALearning School.
 
 ▶️ To run all tests at once use command "pytest tests" in Terminal. 
-And to run only some tests (marked by either "smoke", "regressionion" or "flaky") use this format of the command: "pytest -m [mark] tests"
+And to run only some tests (marked by either "smoke", "regression" or "flaky") use this format of the command: "pytest -m [mark] tests"
