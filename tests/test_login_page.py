@@ -14,7 +14,7 @@ class TestLoginPage:
     # (credentials are collected in TestData.valid_username_and_password_pairs)
     @pytest.mark.parametrize("credentials", TestData.valid_username_and_password_pairs)
     @pytest.mark.smoke
-    @pytest.mark.regress
+    @pytest.mark.regression
     def test_login_with_valid(self, browser, credentials):
         login_page = LoginPage(browser, Links.login_page)
         login_page.login(credentials)
@@ -25,7 +25,7 @@ class TestLoginPage:
     # (credentials are collected in TestData.invalid_username_and_password_pairs)
     @pytest.mark.parametrize("credentials", TestData.invalid_username_and_password_pairs)
     @pytest.mark.smoke
-    @pytest.mark.regress
+    @pytest.mark.regression
     def test_login_with_invalid(self, browser, credentials):
         login_page = LoginPage(browser, Links.login_page)
         login_page.login(credentials)

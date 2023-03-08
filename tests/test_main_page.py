@@ -23,7 +23,7 @@ class TestMainPage:
     #  (verifies every pet type possible to use in filter according to Links.pet_types_in_filter)
     @pytest.mark.parametrize("pet_type", TestData.pet_types_in_filter)  # by that we parametrize the function by fixture
     # and so it will run tests with different values of pet type parameter in filter
-    @pytest.mark.regress
+    @pytest.mark.regression
     @pytest.mark.flaky
     def test_filter_by_type(self, browser, pet_type):
         main_page = MainPage(browser, Links.main_page_link)  # by that we create a page object and it will
@@ -38,7 +38,7 @@ class TestMainPage:
     #  tests whether filter by pet name works
     #  (verifies every pet name mentioned in TestData.pet_names_in_filter)
     @pytest.mark.parametrize("pet_name", TestData.pet_names_in_filter)
-    @pytest.mark.regress
+    @pytest.mark.regression
     @pytest.mark.flaky
     def test_filter_by_name(self, browser, pet_name):
         main_page = MainPage(browser, Links.main_page_link)
